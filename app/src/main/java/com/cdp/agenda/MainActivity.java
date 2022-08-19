@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
-    SearchView txtBuscar;
+
     RecyclerView listaContactos;
     ArrayList<Contactos> listaArrayContactos;
     FloatingActionButton fabNuevo;
@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        txtBuscar = findViewById(R.id.txtBuscar);
         listaContactos = findViewById(R.id.listaContactos);
         fabNuevo = findViewById(R.id.favNuevo);
         listaContactos.setLayoutManager(new LinearLayoutManager(this));
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             }
         });
 
-        txtBuscar.setOnQueryTextListener(this);
+
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
